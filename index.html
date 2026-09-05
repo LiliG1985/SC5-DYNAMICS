@@ -33,7 +33,7 @@
     <nav class="primary-nav" id="primaryNav">
       <ul>
         <li><a href="#about" class="nav-link">About</a></li>
-        <li><a href="#services" class="nav-link">Programs</a></li>
+        <li><a href="#programs" class="nav-link">Programs</a></li>
         <li><a href="#principles" class="nav-link">Principles</a></li>
         <li><a href="#values" class="nav-link">Values</a></li>
         <li><a href="#clinics" class="nav-link">Clinics</a></li>
@@ -61,9 +61,14 @@
         <p class="hero-tagline reveal">TEACH. MOTIVATE. EDUCATE. INSPIRE. SERVE.</p>
         <p class="hero-strapline reveal">Creating a Culture of Servant Leaders through Sports</p>
 
+        <div class="hero-tags reveal">
+          <span class="hero-tag">Private 1-on-1 Coaching</span>
+          <span class="hero-tag">Academy &amp; Team Partnerships</span>
+        </div>
+
         <div class="hero-actions reveal">
-          <a href="#contact" class="btn btn-gold btn-lg">Book a Free Trial</a>
-          <a href="#services" class="btn btn-outline btn-lg">Explore Programs</a>
+          <a href="#" class="btn btn-gold btn-lg whatsapp-link" data-wa-text="Hi! I'd like to know more about training with SC5 Dynamics Dubai." target="_blank" rel="noopener">Chat on WhatsApp</a>
+          <a href="#programs" class="btn btn-outline btn-lg">Explore Programs</a>
         </div>
       </div>
     </div>
@@ -111,6 +116,43 @@
             <path d="M20 125 Q100 100 180 125" fill="none" stroke="#c9a227" stroke-width="2.5"/>
           </svg>
           <p class="about-card-quote">&ldquo;Building Skills. Building Character. Building Leaders. Building the Future.&rdquo;</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROGRAMS SPLIT: PRIVATE COACHING vs ACADEMY PARTNERSHIPS -->
+  <section class="programs-split" id="programs">
+    <div class="container">
+      <p class="eyebrow eyebrow-gold center">Two Ways To Train With Us</p>
+      <h2 class="section-title center light">Private Mastery. Academy Partnerships.</h2>
+      <p class="programs-split-intro">Whether you're investing in one-on-one excellence or building a program for your school or club, you get the same five-principle system SC5 Dynamics has run since 2015.</p>
+
+      <div class="programs-grid">
+        <div class="program-card reveal">
+          <span class="program-badge">For Individuals &amp; Families</span>
+          <h3>Private 1-on-1 Coaching</h3>
+          <p>Fully personalized training built around your schedule and your goals — elite-level coaching with complete discretion, for those who expect results, not routines.</p>
+          <ul class="program-features">
+            <li>Tailored development plan</li>
+            <li>Flexible scheduling &amp; private venues</li>
+            <li>Direct access to your coach</li>
+            <li>Complete privacy &amp; discretion</li>
+          </ul>
+          <a href="#" class="btn btn-gold full-width whatsapp-link" data-wa-text="Hi, I'd like to enquire about private 1-on-1 basketball coaching in Dubai." target="_blank" rel="noopener">Book a Private Consultation</a>
+        </div>
+
+        <div class="program-card reveal">
+          <span class="program-badge">For Schools, Clubs &amp; Academies</span>
+          <h3>Academy &amp; Team Partnerships</h3>
+          <p>We partner with schools, sports clubs, and academies across Dubai to deliver structured team training, clinics, and coach development — built on a proven system.</p>
+          <ul class="program-features">
+            <li>Custom curriculum design</li>
+            <li>Certified coaching staff</li>
+            <li>Clinics &amp; camps</li>
+            <li>Ongoing performance tracking</li>
+          </ul>
+          <a href="#" class="btn btn-outline full-width whatsapp-link" data-wa-text="Hi, I'd like to discuss an academy or team partnership with SC5 Dynamics Dubai." target="_blank" rel="noopener">Discuss a Partnership</a>
         </div>
       </div>
     </div>
@@ -218,9 +260,16 @@
 
         <ul class="contact-details">
           <li>
+            <span class="contact-icon contact-icon-whatsapp" aria-hidden="true">&#128241;</span>
+            <div>
+              <span class="contact-label">WhatsApp</span>
+              <a href="#" class="contact-value contact-link whatsapp-link" data-wa-text="Hi! I'd like to know more about training with SC5 Dynamics Dubai." target="_blank" rel="noopener"><span class="js-whatsapp-display">+1 910 847 4747</span></a>
+            </div>
+          </li>
+          <li>
             <span class="contact-icon" aria-hidden="true">&#128222;</span>
             <div>
-              <span class="contact-label">Phone / WhatsApp</span>
+              <span class="contact-label">Phone</span>
               <span class="contact-value">[Add Dubai phone number]</span>
             </div>
           </li>
@@ -228,7 +277,7 @@
             <span class="contact-icon" aria-hidden="true">&#9993;&#65039;</span>
             <div>
               <span class="contact-label">Email</span>
-              <span class="contact-value">[Add Dubai email address]</span>
+              <a href="mailto:SC5DynamicsBasketball@gmail.com" class="contact-value contact-link">SC5DynamicsBasketball@gmail.com</a>
             </div>
           </li>
           <li>
@@ -250,12 +299,12 @@
         <div class="social-row">
           <a href="#" class="social-icon" aria-label="Instagram">IG</a>
           <a href="#" class="social-icon" aria-label="TikTok">TT</a>
-          <a href="#" class="social-icon" aria-label="WhatsApp">WA</a>
+          <a href="#" class="social-icon whatsapp-link" aria-label="WhatsApp" data-wa-text="Hi! I'd like to know more about training with SC5 Dynamics Dubai." target="_blank" rel="noopener">WA</a>
         </div>
       </div>
 
       <form class="contact-form reveal" id="contactForm">
-        <p class="form-note">This form opens your email client with the message pre-filled — replace <code>YOUR_EMAIL_HERE</code> in <code>main.js</code> once your Dubai email address is set.</p>
+        <p class="form-note">This form opens your email client with the message pre-filled, addressed to <code>SC5DynamicsBasketball@gmail.com</code>.</p>
         <label>
           Name
           <input type="text" name="name" required>
@@ -292,13 +341,19 @@
     </div>
     <nav class="footer-nav" aria-label="Footer">
       <a href="#about">About</a>
-      <a href="#services">Programs</a>
+      <a href="#programs">Programs</a>
       <a href="#principles">Principles</a>
       <a href="#contact">Contact</a>
     </nav>
     <p class="footer-copy">&copy; <span id="year"></span> SC5 Dynamics Dubai. All rights reserved.</p>
   </div>
 </footer>
+
+<a href="#" class="whatsapp-float whatsapp-link" data-wa-text="Hi! I'd like to know more about training with SC5 Dynamics Dubai." target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp">
+  <svg viewBox="0 0 32 32" width="30" height="30" fill="currentColor" aria-hidden="true">
+    <path d="M16.004 2.667c-7.363 0-13.333 5.97-13.333 13.333 0 2.353.615 4.66 1.784 6.687L2.667 29.333l6.83-1.76a13.27 13.27 0 0 0 6.507 1.72h.006c7.363 0 13.333-5.97 13.333-13.333 0-3.56-1.386-6.906-3.904-9.423a13.24 13.24 0 0 0-9.435-3.87Zm0 24.4h-.005a11.06 11.06 0 0 1-5.64-1.545l-.405-.24-4.053 1.045 1.082-3.95-.264-.406a11.04 11.04 0 0 1-1.7-5.93c0-6.11 4.97-11.08 11.09-11.08a11.02 11.02 0 0 1 7.84 3.25 11 11 0 0 1 3.245 7.84c0 6.11-4.973 11.08-11.09 11.08Zm6.08-8.3c-.334-.167-1.97-.972-2.276-1.083-.305-.11-.527-.166-.75.167-.222.334-.86 1.083-1.055 1.306-.194.223-.388.25-.72.083-.334-.167-1.408-.52-2.683-1.657-.992-.885-1.663-1.978-1.858-2.312-.194-.334-.02-.514.146-.68.15-.15.334-.39.5-.583.167-.194.222-.333.334-.556.11-.222.055-.417-.028-.583-.083-.167-.75-1.807-1.028-2.474-.27-.65-.545-.562-.75-.573l-.64-.011a1.23 1.23 0 0 0-.89.417c-.306.334-1.167 1.14-1.167 2.78s1.195 3.226 1.362 3.448c.167.223 2.352 3.593 5.7 5.038.796.344 1.417.55 1.902.703.8.254 1.528.218 2.104.132.642-.096 1.97-.806 2.248-1.583.277-.778.277-1.445.194-1.584-.083-.14-.305-.222-.64-.39Z"/>
+  </svg>
+</a>
 
 <script src="main.js"></script>
 </body>

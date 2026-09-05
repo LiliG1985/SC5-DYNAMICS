@@ -1,9 +1,24 @@
 // SC5 Dynamics Dubai — site interactivity
 
+// WhatsApp number, digits only with country code, no + / spaces / dashes.
+// Currently set to +1 910 847 4747 — update here if the number ever changes,
+// and every WhatsApp button/link on the site updates automatically.
+const WHATSAPP_NUMBER = '19108474747';
+const WHATSAPP_DISPLAY = '+1 910 847 4747';
+
 document.addEventListener('DOMContentLoaded', () => {
   // Footer year
   const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+  // Wire up every WhatsApp button/link from the single number above
+  document.querySelectorAll('.whatsapp-link').forEach((el) => {
+    const message = el.dataset.waText || "Hi! I'd like to know more about training with SC5 Dynamics Dubai.";
+    el.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+  });
+  document.querySelectorAll('.js-whatsapp-display').forEach((el) => {
+    el.textContent = WHATSAPP_DISPLAY;
+  });
 
   // Mobile nav toggle
   const navToggle = document.getElementById('navToggle');
@@ -62,7 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
         `Name: ${name}\nEmail: ${email}\nInterested in: ${interest}\n\nMessage:\n${message}`
       );
 
-      window.location.href = `mailto:YOUR_EMAIL_HERE?subject=${subject}&body=${body}`;
+      window.location.href = `mailto:SC5DynamicsBasketball@gmail.com?subject=${subject}&body=${body}`;
     });
   }
 });

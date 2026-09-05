@@ -107,7 +107,8 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   border-color: rgba(255,255,255,0.5);
 }
 .btn-outline:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-2px); }
-.full-width { width: 100%; text-align: center; border: none; }
+.full-width { width: 100%; text-align: center; }
+button.full-width { border: none; }
 
 /* ---------- Header ---------- */
 .site-header {
@@ -226,7 +227,19 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   color: var(--muted);
   font-size: 1.05rem;
   max-width: 480px;
-  margin: 0 0 34px;
+  margin: 0 0 22px;
+}
+.hero-tags { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 30px; }
+.hero-tag {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  background: rgba(201,162,39,0.1);
+  border: 1px solid rgba(201,162,39,0.4);
+  padding: 7px 14px;
+  border-radius: 999px;
 }
 .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; }
 
@@ -283,6 +296,65 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   line-height: 1.4;
   color: var(--gold);
   margin: 0;
+}
+
+/* ---------- Programs split: Private Coaching vs Academy Partnerships ---------- */
+.programs-split { background: var(--black); padding: 100px 0 110px; }
+.programs-split-intro {
+  max-width: 620px;
+  margin: 0 auto;
+  text-align: center;
+  color: var(--muted);
+}
+.programs-grid {
+  margin-top: 54px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+.program-card {
+  background: linear-gradient(165deg, var(--charcoal), var(--black-soft));
+  border: 1px solid rgba(201,162,39,0.3);
+  border-radius: var(--radius);
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition), border-color var(--transition);
+}
+.program-card:hover { transform: translateY(-6px); border-color: var(--gold); }
+.program-badge {
+  align-self: flex-start;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--black);
+  background: linear-gradient(135deg, var(--gold-light), var(--gold) 60%);
+  padding: 6px 14px;
+  border-radius: 999px;
+  margin-bottom: 20px;
+}
+.program-card h3 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 1.6rem;
+  letter-spacing: 0.5px;
+  margin: 0 0 14px;
+}
+.program-card > p { color: var(--muted); margin: 0 0 22px; }
+.program-features { margin: 0 0 28px; display: flex; flex-direction: column; gap: 10px; flex-grow: 1; }
+.program-features li {
+  position: relative;
+  padding-left: 26px;
+  font-size: 0.92rem;
+  color: var(--white);
+}
+.program-features li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--gold);
+  font-weight: 800;
 }
 
 /* ---------- Principles ---------- */
@@ -412,6 +484,9 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 }
 .contact-label { display: block; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 1px; color: var(--gold); margin-bottom: 2px; }
 .contact-value { display: block; color: var(--white); font-weight: 600; }
+a.contact-link { transition: color var(--transition); }
+a.contact-link:hover { color: var(--gold); }
+.contact-icon-whatsapp { background: rgba(37,211,102,0.12); border-color: rgba(37,211,102,0.45); }
 .social-row { display: flex; gap: 12px; }
 .social-icon {
   width: 40px; height: 40px;
@@ -422,6 +497,28 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   transition: border-color var(--transition), color var(--transition);
 }
 .social-icon:hover { border-color: var(--gold); color: var(--gold); }
+
+/* ---------- Floating WhatsApp button ---------- */
+.whatsapp-float {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: #25D366;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+  z-index: 200;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.whatsapp-float:hover { transform: scale(1.08); box-shadow: 0 10px 26px rgba(0,0,0,0.45); }
+@media (max-width: 760px) {
+  .whatsapp-float { right: 16px; bottom: 16px; width: 52px; height: 52px; }
+}
 
 .contact-form {
   background: var(--black-soft);
@@ -492,6 +589,7 @@ html.has-js .reveal.in-view { opacity: 1; transform: translateY(0); }
   .principles-grid { grid-template-columns: repeat(2, 1fr); }
   .stats-grid { grid-template-columns: repeat(2, 1fr); }
   .hero-photo { max-width: 48%; opacity: 0.75; }
+  .programs-grid { grid-template-columns: 1fr; max-width: 520px; margin-left: auto; margin-right: auto; }
 }
 
 @media (max-width: 880px) {
