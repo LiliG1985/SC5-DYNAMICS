@@ -451,6 +451,16 @@ button.full-width { border: none; }
   background: var(--gold);
 }
 
+/* ---------- Photo dividers ---------- */
+.photo-divider {
+  display: block;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-top: 1px solid rgba(179,146,79,0.3);
+  border-bottom: 1px solid rgba(179,146,79,0.3);
+}
+
 /* ---------- Dubai banner ---------- */
 .dubai-banner {
   position: relative;
@@ -790,4 +800,5 @@ html.has-js .reveal.in-view { opacity: 1; transform: translateY(0); }
   .hero-photo { display: none; }
   .dubai-banner { height: 280px; }
   .offer-photo { max-height: 220px; }
+  .photo-divider { height: 130px; }
 }
