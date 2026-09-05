@@ -357,21 +357,12 @@ button.full-width { border: none; }
   align-items: center;
 }
 .coach-photo-frame {
+  width: 100%;
   aspect-ratio: 3 / 4;
+  object-fit: cover;
   border: 1px solid rgba(179,146,79,0.4);
-  background: linear-gradient(160deg, var(--charcoal), var(--black));
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 20px;
-}
-.coach-photo-frame span {
-  font-family: var(--font-display);
-  font-style: italic;
-  font-size: 1.1rem;
-  color: var(--muted);
-  line-height: 1.5;
+  border-radius: var(--radius);
+  display: block;
 }
 .coach-copy .section-title { margin-bottom: 18px; }
 .coach-copy > p { color: var(--muted); margin: 0 0 26px; max-width: 560px; }
