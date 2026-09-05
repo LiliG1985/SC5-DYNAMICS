@@ -647,7 +647,15 @@ button.full-width { border: none; }
 .cta-banner-inner p { margin: 0 0 30px; color: var(--muted); }
 
 /* ---------- Contact ---------- */
-.contact { background: var(--black); padding: 110px 0; }
+.contact {
+  background:
+    linear-gradient(180deg, rgba(10,10,9,0.93) 0%, rgba(10,10,9,0.88) 45%, rgba(10,10,9,0.96) 100%),
+    url('divider-team-walk.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 110px 0;
+}
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
