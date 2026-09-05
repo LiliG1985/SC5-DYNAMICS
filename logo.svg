@@ -1,9 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="240" height="240">
   <defs>
     <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#f3d27a"/>
-      <stop offset="50%" stop-color="#c9a227"/>
-      <stop offset="100%" stop-color="#9c7a1a"/>
+      <stop offset="0%" stop-color="#7d6531"/>
+      <stop offset="22%" stop-color="#cda75f"/>
+      <stop offset="45%" stop-color="#f3e3b8"/>
+      <stop offset="60%" stop-color="#b3924f"/>
+      <stop offset="100%" stop-color="#7d6531"/>
     </linearGradient>
   </defs>
 
